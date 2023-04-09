@@ -4,6 +4,9 @@
   /* justify-content: space-between; */
   /* align-items: center; */
   padding: 6rem;
+  @media (max-width: 780px) {
+    padding: 1rem;
+  }
 }
 
 .description {
