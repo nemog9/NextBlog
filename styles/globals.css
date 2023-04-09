@@ -101,6 +101,14 @@ a {
   text-decoration: none;
 }
 
+p {
+  padding: 0.5rem 0;
+}
+
+ul {
+  padding-left: 1rem;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

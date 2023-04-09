@@ -6,6 +6,7 @@ import styles from '@/styles/Home.module.css';
 import { getAllPosts } from '../lib/api';
 import Link from 'next/link';
 import { Box, Typography } from '@mui/material';
+import YouTube, { YouTubeProps } from 'react-youtube';
 
 const inter = Inter({ subsets: ['latin'] });
 
