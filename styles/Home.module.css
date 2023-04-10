@@ -3,11 +3,13 @@
   flex-direction: column;
   /* justify-content: space-between; */
   /* align-items: center; */
-  /* padding: 6rem;
-  @media (max-width: 780px) {
+  padding: 6rem;
+}
+
+@media screen and (max-width: 768px) {
+  .main {
     padding: 1rem;
-  } */
-  padding: 1rem;
+  }
 }
 
 .description {

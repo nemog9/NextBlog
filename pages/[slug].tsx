@@ -14,8 +14,8 @@ type Props = {
 const Post = ({ post }: Props) => {
   return (
     <main className={styles.main}>
-      <Box sx={{ pb: 4 }}>
-        <Typography variant="h3">{post.title}</Typography>
+      <Box sx={{ pb: 2 }}>
+        <Typography variant="h4">{post.title}</Typography>
         <Typography variant="h6">{post.date}</Typography>
       </Box>
       <MDXProvider>

@@ -24,10 +24,9 @@ export default function Home({ allPosts }: Props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <Typography variant="h3">記事一覧</Typography>
         {allPosts.map(({ title, date, slug }) => {
           return (
-            <Box sx={{ p: 4 }} key={slug}>
+            <Box sx={{ py: 2 }} key={slug}>
               <Link href={{ pathname: '/[slug]', query: { slug: slug } }}>
                 <Typography variant="h4">{title}</Typography>
                 <Typography>{date}</Typography>
