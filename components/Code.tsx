@@ -13,7 +13,7 @@ export const Code: CodeComponent = ({
   if (match && match.length > 0 && match[1] === 'youtube') {
     return (
       <div className="youtube-wrap">
-        <YouTube videoId={children[0]} />
+        <YouTube videoId={children[0] as string} />
       </div>
     );
   }
