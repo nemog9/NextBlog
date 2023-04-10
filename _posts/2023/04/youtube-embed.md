@@ -72,7 +72,7 @@ export const Code: CodeComponent = ({
 
   }
   return !inline && match ? (
-    &lt;SyntaxHighlighter
+    <SyntaxHighlighter
       style={okaidia}
       language={match[1]}
       PreTag="div"
@@ -81,7 +81,7 @@ export const Code: CodeComponent = ({
       {String(children).replace(/\\n$/, '')}
     </SyntaxHighlighter>
   ) : (
-    &lt;code className={className} {...props}>
+    <code className={className} {...props}>
       {children}
     </code>
   );
