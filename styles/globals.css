@@ -106,7 +106,8 @@ p {
   padding: 0.5rem 0;
 }
 
-ul {
+ul,
+ol {
   padding-left: 1rem;
 }
 
@@ -114,4 +115,18 @@ ul {
   html {
     color-scheme: dark;
   }
+}
+
+code {
+  background-color: rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+  padding: 0.1em 0.4em;
+}
+
+.youtube-wrap iframe {
+  margin: 1rem 0;
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  max-width: 680px;
+  height: auto;
 }

@@ -5,7 +5,6 @@ import remarkGfm from 'remark-gfm';
 import PostType from '../interfaces/post';
 import styles from '@/styles/Home.module.css';
 import { Code } from '../components/Code';
-import { MDXProvider } from '@mdx-js/react';
 
 type Props = {
   post: PostType;
@@ -18,11 +17,9 @@ const Post = ({ post }: Props) => {
         <Typography variant="h4">{post.title}</Typography>
         <Typography variant="h6">{post.date}</Typography>
       </Box>
-      <MDXProvider>
-        <ReactMarkdown remarkPlugins={[remarkGfm]} components={{ code: Code }}>
-          {post.content}
-        </ReactMarkdown>
-      </MDXProvider>
+      <ReactMarkdown remarkPlugins={[remarkGfm]} components={{ code: Code }}>
+        {post.content}
+      </ReactMarkdown>
     </main>
   );
 };

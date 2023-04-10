@@ -1,6 +1,7 @@
 import { CodeComponent } from 'react-markdown/lib/ast-to-react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { okaidia } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import YouTube from 'react-youtube';
 
 export const Code: CodeComponent = ({
   inline,
@@ -9,6 +10,13 @@ export const Code: CodeComponent = ({
   ...props
 }) => {
   const match = /language-(\w+)/.exec(className || '');
+  if (match && match.length > 0 && match[1] === 'youtube') {
+    return (
+      <div className="youtube-wrap">
+        <YouTube videoId={children[0]} />
+      </div>
+    );
+  }
   return !inline && match ? (
     <SyntaxHighlighter
       // TODO: ここのエラーを消したい

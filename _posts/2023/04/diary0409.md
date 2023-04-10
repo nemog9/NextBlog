@@ -9,7 +9,7 @@ Material UI を使ったので、いい感じな、無難な出来になった�
 
 別に技術のことにかかわらず、言語化能力を磨いていく事が大事だと思う。ので、色々と書いていきます。よろしくおねがいします。
 
-### 発見：SQL 文は最後に巻末ケルトエラーになる
+### 発見：SQL 文は最後にカンマをつけるとエラーになる
 
 ```sql
 create table posts (
@@ -59,9 +59,9 @@ create table posts (
 
 以下を食べました。3 回くらい作ってますがめっちゃ美味しいです。調理もかんたん。おすすめ。
 
-本当は YouTube 埋め込みしたかったけど MDX 部分がうまく行ってなさそう。うーむ。
-
-[https://www.youtube.com/watch?v=NA416gXGtas&ab_channel=%E3%81%A0%E3%82%8C%E3%82%A6%E3%83%9E%E3%80%90%E6%96%99%E7%90%86%E7%A0%94%E7%A9%B6%E5%AE%B6%E3%80%91](https://www.youtube.com/watch?v=NA416gXGtas&ab_channel=%E3%81%A0%E3%82%8C%E3%82%A6%E3%83%9E%E3%80%90%E6%96%99%E7%90%86%E7%A0%94%E7%A9%B6%E5%AE%B6%E3%80%91)
+```youtube
+NA416gXGtas
+```
 
 ### 寝ます
 
