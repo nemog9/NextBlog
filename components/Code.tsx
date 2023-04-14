@@ -10,6 +10,8 @@ export const Code: CodeComponent = ({
   ...props
 }) => {
   const match = /language-(\w+)/.exec(className || '');
+  const matchFileName =
+    className && className.includes(':') ? className.split(':') : null;
   if (match && match.length > 0 && match[1] === 'youtube') {
     return (
       <div className="youtube-wrap">
@@ -18,15 +20,18 @@ export const Code: CodeComponent = ({
     );
   }
   return !inline && match ? (
-    <SyntaxHighlighter
-      // TODO: ここのエラーを消したい
-      style={okaidia as any}
-      language={match[1]}
-      PreTag="div"
-      {...props}
-      w={100}>
-      {String(children).replace(/\n$/, '')}
-    </SyntaxHighlighter>
+    <>
+      {matchFileName && <span className="file-name">{matchFileName[1]}</span>}
+      <SyntaxHighlighter
+        // TODO: ここのエラーを消したい
+        style={okaidia as any}
+        language={match[1]}
+        PreTag="div"
+        {...props}
+        w={100}>
+        {String(children).replace(/\n$/, '')}
+      </SyntaxHighlighter>
+    </>
   ) : (
     <code className={className} {...props}>
       {children}

@@ -130,3 +130,14 @@ code {
   max-width: 680px;
   height: auto;
 }
+
+.file-name {
+  background: #167ac6;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  margin-bottom: -0.8rem;
+  display: table;
+}
