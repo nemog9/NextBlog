@@ -4,7 +4,7 @@ import { Noto_Sans_JP } from 'next/font/google';
 
 const notoSansJp = Noto_Sans_JP({ weight: '700', subsets: ['latin'] });
 
-const theme = createTheme({
+const Theme = createTheme({
     palette: {
         mode: 'dark',
         primary: {
@@ -20,4 +20,4 @@ const theme = createTheme({
     },
 });
 
-export default theme;
+export default Theme;

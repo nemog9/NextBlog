@@ -1,9 +1,9 @@
 import { Box, Typography } from '@mui/material';
 import Link from 'next/link';
 import SimpleIconsGithub from './icons/GitHub';
-import { SimpleIconsTwitter } from './icons/Twitter';
-import { SimpleIconsYoutube } from './icons/YouTube';
-import { SimpleIconsZenn } from './icons/Zenn';
+import SimpleIconsTwitter from './icons/Twitter';
+import SimpleIconsYoutube from './icons/YouTube';
+import SimpleIconsZenn from './icons/Zenn';
 
 const Profile = () => {
     return (
