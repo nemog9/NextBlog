@@ -2,6 +2,7 @@ import '@/styles/globals.css';
 import { Layout } from '../components/Layout';
 import { theme } from '../theme';
 import { ThemeProvider } from '@mui/material';
+import styled from '@emotion/styled';
 
 export default function App({ Component, pageProps }) {
   return (
