@@ -1,14 +1,13 @@
-import '@/styles/globals.css';
-import { Layout } from '../components/Layout';
-import { theme } from '../theme';
+import '../styles/globals.css';
 import { ThemeProvider } from '@mui/material';
-import styled from '@emotion/styled';
+import Layout from '../components/Layout';
+import theme from '../theme';
 
 export default function App({ Component, pageProps }) {
-  return (
-    <ThemeProvider theme={theme}>
-      <Layout />
-      <Component {...pageProps} />
-    </ThemeProvider>
-  );
+    return (
+        <ThemeProvider theme={theme}>
+            <Layout />
+            <Component {...pageProps} />
+        </ThemeProvider>
+    );
 }
