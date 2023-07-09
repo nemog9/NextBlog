@@ -11,8 +11,8 @@ const Theme = createTheme({
         },
     },
     typography: {
-        fontFamily: 'Noto Sans JP',
-        fontWeightRegular: '600',
+        fontFamily: ['Noto Sans JP', 'sans-serif'].join(','),
+        fontWeightRegular: '500',
     },
 });
 
