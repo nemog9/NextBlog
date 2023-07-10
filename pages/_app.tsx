@@ -3,6 +3,7 @@ import { ThemeProvider } from '@mui/material';
 import { Noto_Sans_JP } from 'next/font/google';
 import Head from 'next/head';
 import CustomDivider from '../components/CustomDivider';
+import Header from '../components/Header';
 import Layout from '../components/Layout';
 import theme from '../theme';
 
@@ -22,7 +23,7 @@ export default function App({ Component, pageProps }) {
                 <meta name='viewport' content='width=device-width, initial-scale=1' />
                 <link rel='icon' href='/favicon.ico' />
             </Head>
-            <Layout />
+            <Header />
             <CustomDivider />
             <Component {...pageProps} />
         </ThemeProvider>

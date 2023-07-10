@@ -1,16 +1,11 @@
 import { Box, Typography } from '@mui/material';
 import Link from 'next/link';
+import Layout from '../../components/Layout';
 import { getAllTags } from '../../lib/api';
 
 const Tags = ({ allTags }) => {
     return (
-        <Box
-            sx={{
-                p: 4,
-                maxWidth: '48rem',
-                m: 'auto',
-            }}
-        >
+        <Layout>
             <Typography variant='h5'>All Tags</Typography>
             <Box
                 sx={{
@@ -32,7 +27,7 @@ const Tags = ({ allTags }) => {
                     );
                 })}
             </Box>
-        </Box>
+        </Layout>
     );
 };
 

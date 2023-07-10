@@ -1,16 +1,11 @@
 import { Box, Pagination, PaginationItem, Typography, styled } from '@mui/material';
 import Link from 'next/link';
+import Layout from '../../../components/Layout';
 import { getAllPosts } from '../../../lib/api';
 
 const Page = ({ latestPosts, pageNum, pageCount }) => {
     return (
-        <Box
-            sx={{
-                p: 4,
-                maxWidth: '48rem',
-                m: 'auto',
-            }}
-        >
+        <Layout>
             <Typography variant='h5'>All Posts</Typography>
             {latestPosts.map(({ title, date, slug }) => {
                 return (
@@ -49,7 +44,7 @@ const Page = ({ latestPosts, pageNum, pageCount }) => {
                     }
                 />
             </Box>
-        </Box>
+        </Layout>
     );
 };
 

@@ -7,13 +7,7 @@ import SimpleIconsZenn from './icons/Zenn';
 
 const Profile = () => {
     return (
-        <Box
-            sx={{
-                p: 4,
-                maxWidth: '48rem',
-                m: 'auto',
-            }}
-        >
+        <>
             <Typography variant='h4'>nemog</Typography>
             <Typography>システムエンジニアをしています。</Typography>
             <Box
@@ -35,7 +29,7 @@ const Profile = () => {
                     <SimpleIconsYoutube />
                 </Link>
             </Box>
-        </Box>
+        </>
     );
 };
 

@@ -1,21 +1,18 @@
 import { Box, Typography } from '@mui/material';
 import Link from 'next/link';
 import CustomDivider from '../components/CustomDivider';
+import Layout from '../components/Layout';
 import Profile from '../components/Profile';
 import { getAllPosts } from '../lib/api';
 
 export default function Home({ latestPosts }) {
     return (
         <>
-            <Profile />
+            <Layout>
+                <Profile />
+            </Layout>
             <CustomDivider />
-            <Box
-                sx={{
-                    p: 4,
-                    maxWidth: '48rem',
-                    m: 'auto',
-                }}
-            >
+            <Layout>
                 <Typography variant='h5'>Latest Posts</Typography>
                 {latestPosts.map(({ title, date, slug }) => {
                     return (
@@ -34,15 +31,9 @@ export default function Home({ latestPosts }) {
                         </Box>
                     );
                 })}
-            </Box>
+            </Layout>
             <CustomDivider />
-            <Box
-                sx={{
-                    p: 4,
-                    maxWidth: '48rem',
-                    m: 'auto',
-                }}
-            >
+            <Layout>
                 <Typography variant='h5'>Navigation</Typography>
                 <Box
                     sx={{
@@ -60,7 +51,7 @@ export default function Home({ latestPosts }) {
                         <Typography>Repository</Typography>
                     </Link>
                 </Box>
-            </Box>
+            </Layout>
         </>
     );
 }

@@ -1,16 +1,11 @@
 import { Box, Typography } from '@mui/material';
 import Link from 'next/link';
+import Layout from '../../components/Layout';
 import { getAllPosts, getAllTags } from '../../lib/api';
 
 const Tag = ({ filteredPosts, tagName }) => {
     return (
-        <Box
-            sx={{
-                p: 4,
-                maxWidth: '48rem',
-                m: 'auto',
-            }}
-        >
+        <Layout>
             <Typography variant='h5'># {tagName}</Typography>
             {filteredPosts.map(({ title, date, slug }) => {
                 return (
@@ -29,7 +24,7 @@ const Tag = ({ filteredPosts, tagName }) => {
                     </Box>
                 );
             })}
-        </Box>
+        </Layout>
     );
 };
 

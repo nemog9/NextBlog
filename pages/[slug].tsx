@@ -3,6 +3,7 @@ import Link from 'next/link';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import Code from '../components/Code';
+import Layout from '../components/Layout';
 import PostType from '../interfaces/post';
 import { getAllPosts, getPostBySlug } from '../lib/api';
 import styles from '../styles/Home.module.css';
@@ -13,13 +14,7 @@ type Props = {
 
 const Post = ({ post }: Props) => {
     return (
-        <Box
-            sx={{
-                p: 4,
-                maxWidth: '48rem',
-                m: 'auto',
-            }}
-        >
+        <Layout>
             <Box sx={{ py: 2 }}>
                 <Typography
                     variant='h4'
@@ -40,7 +35,13 @@ const Post = ({ post }: Props) => {
                         post.tags.length !== 0 &&
                         post.tags.map((tag) => (
                             <Link href={`/tags/${encodeURIComponent(tag)}`} key={tag}>
-                                <Typography># {tag}</Typography>
+                                <Typography
+                                    sx={{
+                                        color: 'primary.main',
+                                    }}
+                                >
+                                    # {tag}
+                                </Typography>
                             </Link>
                         ))}
                 </Box>
@@ -48,7 +49,7 @@ const Post = ({ post }: Props) => {
             <ReactMarkdown remarkPlugins={[remarkGfm]} components={{ code: Code }}>
                 {post.content}
             </ReactMarkdown>
-        </Box>
+        </Layout>
     );
 };
 
