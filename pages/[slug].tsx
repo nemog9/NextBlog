@@ -40,7 +40,7 @@ const Post = ({ post }: Props) => {
                         post.tags.length !== 0 &&
                         post.tags.map((tag) => (
                             <Link href={`/tags/${encodeURIComponent(tag)}`} key={tag}>
-                                <Typography>#{tag}</Typography>
+                                <Typography># {tag}</Typography>
                             </Link>
                         ))}
                 </Box>

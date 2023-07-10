@@ -11,7 +11,7 @@ const Tag = ({ filteredPosts, tagName }) => {
                 m: 'auto',
             }}
         >
-            <Typography variant='h6'># {tagName} の記事一覧</Typography>
+            <Typography variant='h5'># {tagName}</Typography>
             {filteredPosts.map(({ title, date, slug }) => {
                 return (
                     <Box sx={{ py: 2 }} key={slug}>

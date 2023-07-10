@@ -11,7 +11,7 @@ const Page = ({ latestPosts, pageNum, pageCount }) => {
                 m: 'auto',
             }}
         >
-            <Typography variant='h5'>Posts</Typography>
+            <Typography variant='h5'>All Posts</Typography>
             {latestPosts.map(({ title, date, slug }) => {
                 return (
                     <Box sx={{ py: 2 }} key={slug}>

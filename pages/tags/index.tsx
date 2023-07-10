@@ -11,7 +11,7 @@ const Tags = ({ allTags }) => {
                 m: 'auto',
             }}
         >
-            <Typography variant='h6'>タグ一覧</Typography>
+            <Typography variant='h5'>All Tags</Typography>
             <Box
                 sx={{
                     display: 'flex',

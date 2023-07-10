@@ -26,8 +26,14 @@ export default function Home({ latestPosts }) {
                     }}
                 />
             </Box>
-            <main className={styles.main}>
-                <Typography variant='h5'>Posts</Typography>
+            <Box
+                sx={{
+                    p: 4,
+                    maxWidth: '48rem',
+                    m: 'auto',
+                }}
+            >
+                <Typography variant='h5'>Latest Posts</Typography>
                 {latestPosts.map(({ title, date, slug }) => {
                     return (
                         <Box sx={{ py: 2 }} key={slug}>
@@ -45,13 +51,44 @@ export default function Home({ latestPosts }) {
                         </Box>
                     );
                 })}
-                <Link href={{ pathname: '/posts/page/1' }}>
-                    <Typography>Posts</Typography>
-                </Link>
-                <Link href={{ pathname: '/tags' }}>
-                    <Typography>Tags</Typography>
-                </Link>
-            </main>
+            </Box>
+            <Box
+                sx={{
+                    px: 2,
+                }}
+            >
+                <Divider
+                    sx={{
+                        borderColor: 'primary.main',
+                        borderBottomWidth: 2,
+                        mx: 4,
+                        maxWidth: '48rem',
+                        m: 'auto',
+                    }}
+                />
+            </Box>
+            <Box
+                sx={{
+                    p: 4,
+                    maxWidth: '48rem',
+                    m: 'auto',
+                }}
+            >
+                <Typography variant='h5'>Navigation</Typography>
+                <Box
+                    sx={{
+                        display: 'flex',
+                        gap: 2,
+                    }}
+                >
+                    <Link href={{ pathname: '/posts/page/1' }}>
+                        <Typography>{'All Posts'}</Typography>
+                    </Link>
+                    <Link href={{ pathname: '/tags' }}>
+                        <Typography>{'All Tags'}</Typography>
+                    </Link>
+                </Box>
+            </Box>
         </>
     );
 }
