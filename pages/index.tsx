@@ -1,31 +1,14 @@
-import { Box, Divider, Typography } from '@mui/material';
-import { Inter } from 'next/font/google';
-import Head from 'next/head';
+import { Box, Typography } from '@mui/material';
 import Link from 'next/link';
+import CustomDivider from '../components/CustomDivider';
 import Profile from '../components/Profile';
-import Post from '../interfaces/post';
 import { getAllPosts } from '../lib/api';
-import styles from '../styles/Home.module.css';
 
 export default function Home({ latestPosts }) {
     return (
         <>
             <Profile />
-            <Box
-                sx={{
-                    px: 2,
-                }}
-            >
-                <Divider
-                    sx={{
-                        borderColor: 'primary.main',
-                        borderBottomWidth: 2,
-                        mx: 4,
-                        maxWidth: '48rem',
-                        m: 'auto',
-                    }}
-                />
-            </Box>
+            <CustomDivider />
             <Box
                 sx={{
                     p: 4,
@@ -52,21 +35,7 @@ export default function Home({ latestPosts }) {
                     );
                 })}
             </Box>
-            <Box
-                sx={{
-                    px: 2,
-                }}
-            >
-                <Divider
-                    sx={{
-                        borderColor: 'primary.main',
-                        borderBottomWidth: 2,
-                        mx: 4,
-                        maxWidth: '48rem',
-                        m: 'auto',
-                    }}
-                />
-            </Box>
+            <CustomDivider />
             <Box
                 sx={{
                     p: 4,
@@ -86,6 +55,9 @@ export default function Home({ latestPosts }) {
                     </Link>
                     <Link href={{ pathname: '/tags' }}>
                         <Typography>{'All Tags'}</Typography>
+                    </Link>
+                    <Link href='https://github.com/nemog9/NextBlog'>
+                        <Typography>Repository</Typography>
                     </Link>
                 </Box>
             </Box>

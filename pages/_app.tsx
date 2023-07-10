@@ -1,7 +1,8 @@
 import '../styles/globals.css';
-import { Box, Divider, ThemeProvider } from '@mui/material';
+import { ThemeProvider } from '@mui/material';
 import { Noto_Sans_JP } from 'next/font/google';
 import Head from 'next/head';
+import CustomDivider from '../components/CustomDivider';
 import Layout from '../components/Layout';
 import theme from '../theme';
 
@@ -22,21 +23,7 @@ export default function App({ Component, pageProps }) {
                 <link rel='icon' href='/favicon.ico' />
             </Head>
             <Layout />
-            <Box
-                sx={{
-                    px: 2,
-                }}
-            >
-                <Divider
-                    sx={{
-                        borderColor: 'primary.main',
-                        borderBottomWidth: 2,
-                        mx: 4,
-                        maxWidth: '48rem',
-                        m: 'auto',
-                    }}
-                />
-            </Box>
+            <CustomDivider />
             <Component {...pageProps} />
         </ThemeProvider>
     );
