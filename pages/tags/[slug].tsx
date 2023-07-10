@@ -4,7 +4,13 @@ import { getAllPosts, getAllTags } from '../../lib/api';
 
 const Tag = ({ filteredPosts, tagName }) => {
     return (
-        <>
+        <Box
+            sx={{
+                p: 4,
+                maxWidth: '48rem',
+                m: 'auto',
+            }}
+        >
             <Typography variant='h6'># {tagName} の記事一覧</Typography>
             {filteredPosts.map(({ title, date, slug }) => {
                 return (
@@ -23,7 +29,7 @@ const Tag = ({ filteredPosts, tagName }) => {
                     </Box>
                 );
             })}
-        </>
+        </Box>
     );
 };
 

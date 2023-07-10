@@ -4,7 +4,13 @@ import { getAllTags } from '../../lib/api';
 
 const Tags = ({ allTags }) => {
     return (
-        <>
+        <Box
+            sx={{
+                p: 4,
+                maxWidth: '48rem',
+                m: 'auto',
+            }}
+        >
             <Typography variant='h6'>タグ一覧</Typography>
             <Box
                 sx={{
@@ -20,7 +26,7 @@ const Tags = ({ allTags }) => {
                     );
                 })}
             </Box>
-        </>
+        </Box>
     );
 };
 

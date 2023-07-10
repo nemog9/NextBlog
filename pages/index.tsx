@@ -7,11 +7,7 @@ import Post from '../interfaces/post';
 import { getAllPosts } from '../lib/api';
 import styles from '../styles/Home.module.css';
 
-type Props = {
-    allPosts: Post[];
-};
-
-export default function Home({ allPosts }: Props) {
+export default function Home({ latestPosts }) {
     return (
         <>
             <Head>
@@ -38,7 +34,7 @@ export default function Home({ allPosts }: Props) {
             </Box>
             <main className={styles.main}>
                 <Typography variant='h5'>Posts</Typography>
-                {allPosts.map(({ title, date, slug }) => {
+                {latestPosts.map(({ title, date, slug }) => {
                     return (
                         <Box sx={{ py: 2 }} key={slug}>
                             <Link href={{ pathname: '/[slug]', query: { slug: slug } }}>
@@ -55,6 +51,9 @@ export default function Home({ allPosts }: Props) {
                         </Box>
                     );
                 })}
+                <Link href={{ pathname: '/posts/page/1' }}>
+                    <Typography>Posts</Typography>
+                </Link>
                 <Link href={{ pathname: '/tags' }}>
                     <Typography>Tags</Typography>
                 </Link>
@@ -65,8 +64,8 @@ export default function Home({ allPosts }: Props) {
 
 export const getStaticProps = async () => {
     const allPosts = getAllPosts(['title', 'date', 'slug', 'coverImage', 'except']);
-
+    const latestPosts = allPosts.slice(0, 3);
     return {
-        props: { allPosts },
+        props: { latestPosts },
     };
 };
