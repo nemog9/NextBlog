@@ -21,7 +21,13 @@ const Tags = ({ allTags }) => {
                 {allTags.map((tag) => {
                     return (
                         <Link href={{ pathname: '/tags/[slug]', query: { slug: tag } }} key={tag}>
-                            <Typography># {tag}</Typography>
+                            <Typography
+                                sx={{
+                                    color: 'primary.main',
+                                }}
+                            >
+                                # {tag}
+                            </Typography>
                         </Link>
                     );
                 })}
