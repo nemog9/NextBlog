@@ -1,6 +1,9 @@
 ---
 title: 'YouTubeの埋め込みを作る'
 date: '2023-04-10'
+tags:
+ - 'Nextjs'
+ - 'blog'
 ---
 
 ## 完成形

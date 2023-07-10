@@ -46,6 +46,9 @@ body {
 a {
     color: inherit;
     text-decoration: none;
+    /* :hover {
+        color: #167ac6;
+    } */
 }
 
 p {

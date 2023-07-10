@@ -1,4 +1,5 @@
 import { Box, Typography } from '@mui/material';
+import Link from 'next/link';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import Code from '../components/Code';
@@ -23,6 +24,20 @@ const Post = ({ post }: Props) => {
                     {post.title}
                 </Typography>
                 <Typography>{post.date}</Typography>
+                <Box
+                    sx={{
+                        display: 'flex',
+                        gap: 1,
+                    }}
+                >
+                    {post.tags &&
+                        post.tags.length !== 0 &&
+                        post.tags.map((tag) => (
+                            <Link href={`/tags/${encodeURIComponent(tag)}`} key={tag}>
+                                <Typography>#{tag}</Typography>
+                            </Link>
+                        ))}
+                </Box>
             </Box>
             <ReactMarkdown remarkPlugins={[remarkGfm]} components={{ code: Code }}>
                 {post.content}
@@ -46,6 +61,7 @@ export const getStaticProps = async ({ params }: Params) => {
         'content',
         'onImage',
         'coverImage',
+        'tags',
     ]);
     const content = post.content;
 

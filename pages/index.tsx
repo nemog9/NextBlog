@@ -7,8 +7,6 @@ import Post from '../interfaces/post';
 import { getAllPosts } from '../lib/api';
 import styles from '../styles/Home.module.css';
 
-const inter = Inter({ subsets: ['latin'] });
-
 type Props = {
     allPosts: Post[];
 };
@@ -22,21 +20,6 @@ export default function Home({ allPosts }: Props) {
                 <meta name='viewport' content='width=device-width, initial-scale=1' />
                 <link rel='icon' href='/favicon.ico' />
             </Head>
-            <Box
-                sx={{
-                    px: 2,
-                }}
-            >
-                <Divider
-                    sx={{
-                        borderColor: 'primary.main',
-                        borderBottomWidth: 2,
-                        mx: 4,
-                        maxWidth: '48rem',
-                        m: 'auto',
-                    }}
-                />
-            </Box>
             <Profile />
             <Box
                 sx={{
@@ -72,6 +55,9 @@ export default function Home({ allPosts }: Props) {
                         </Box>
                     );
                 })}
+                <Link href={{ pathname: '/tags' }}>
+                    <Typography>Tags</Typography>
+                </Link>
             </main>
         </>
     );

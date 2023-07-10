@@ -52,3 +52,12 @@ export const getAllPosts = (fields: string[] = []) => {
         .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
     return posts;
 };
+
+export const getAllTags = () => {
+    const allPosts = getAllPosts(['tags'])
+        .filter((post) => post.tags)
+        .map((post) => post.tags);
+    const tags = allPosts.flat();
+    const tagSet = new Set(tags);
+    return Array.from(tagSet).sort();
+};
