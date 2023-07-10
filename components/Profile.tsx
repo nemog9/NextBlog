@@ -1,4 +1,5 @@
 import { Box, Typography } from '@mui/material';
+import Image from 'next/image';
 import Link from 'next/link';
 import SimpleIconsGithub from './icons/GitHub';
 import SimpleIconsTwitter from './icons/Twitter';
@@ -6,9 +7,27 @@ import SimpleIconsYoutube from './icons/YouTube';
 import SimpleIconsZenn from './icons/Zenn';
 
 const Profile = () => {
+    const imageStyle = {
+        borderRadius: '50%',
+    };
     return (
         <>
-            <Typography variant='h4'>nemog</Typography>
+            <Box
+                sx={{
+                    display: 'flex',
+                    // justifyContent: 'space-between',
+                    gap: 12,
+                }}
+            >
+                <Typography variant='h4'>nemog</Typography>
+                <Image
+                    src='/nemog.jpg'
+                    alt='Profile Icon'
+                    width={100}
+                    height={100}
+                    style={imageStyle}
+                />
+            </Box>
             <Typography>システムエンジニアをしています。</Typography>
             <Box
                 sx={{
