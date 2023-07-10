@@ -13,7 +13,13 @@ type Props = {
 
 const Post = ({ post }: Props) => {
     return (
-        <main className={styles.main}>
+        <Box
+            sx={{
+                p: 4,
+                maxWidth: '48rem',
+                m: 'auto',
+            }}
+        >
             <Box sx={{ py: 2 }}>
                 <Typography
                     variant='h4'
@@ -42,7 +48,7 @@ const Post = ({ post }: Props) => {
             <ReactMarkdown remarkPlugins={[remarkGfm]} components={{ code: Code }}>
                 {post.content}
             </ReactMarkdown>
-        </main>
+        </Box>
     );
 };
 
