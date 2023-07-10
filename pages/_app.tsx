@@ -1,11 +1,10 @@
-import '../styles/globals.css';
+import '@/styles/globals.css';
 import { ThemeProvider } from '@mui/material';
 import { Noto_Sans_JP } from 'next/font/google';
 import Head from 'next/head';
-import CustomDivider from '../components/CustomDivider';
-import Header from '../components/Header';
-import Layout from '../components/Layout';
-import theme from '../theme';
+import CustomDivider from '@/components/CustomDivider';
+import Header from '@/components/Header';
+import theme from '@/theme/index';
 
 const notoSansJp = Noto_Sans_JP({ weight: '700', subsets: ['latin'] });
 

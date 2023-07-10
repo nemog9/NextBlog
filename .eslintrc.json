@@ -1,4 +1,5 @@
 {
+    "plugins": ["import"],
     "extends": [
         "next/core-web-vitals",
         "plugin:import/recommended",
@@ -13,12 +14,18 @@
                     "order": "asc"
                 }
             }
-        ]
+        ],
+        "import/no-unresolved": "error"
     },
     "settings": {
+        "import/parsers": {
+            "@typescript-eslint/parser": [".ts", ".tsx"]
+        },
         "import/resolver": {
-            "node": {
-                "paths": ["/"]
+            "typescript": {
+                "alwaysTryTypes": true, // always try to resolve types under `<root>@types` directory even it doesn't contain any source code, like `@types/unist`
+                 // use <root>/path/to/folder/tsconfig.json
+                "project": "."
             }
         }
     }

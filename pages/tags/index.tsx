@@ -1,7 +1,7 @@
 import { Box, Typography } from '@mui/material';
 import Link from 'next/link';
-import Layout from '../../components/Layout';
-import { getAllTags } from '../../lib/api';
+import Layout from '@/components/Layout';
+import { getAllTags } from '@/lib/api';
 
 const Tags = ({ allTags }) => {
     return (

@@ -1,7 +1,7 @@
 import { Box, Typography } from '@mui/material';
 import Link from 'next/link';
-import Layout from '../../components/Layout';
-import { getAllPosts, getAllTags } from '../../lib/api';
+import Layout from '@/components/Layout';
+import { getAllPosts, getAllTags } from '@/lib/api';
 
 const Tag = ({ filteredPosts, tagName }) => {
     return (
@@ -10,7 +10,7 @@ const Tag = ({ filteredPosts, tagName }) => {
             {filteredPosts.map(({ title, date, slug }) => {
                 return (
                     <Box sx={{ py: 2 }} key={slug}>
-                        <Link href={{ pathname: '/[slug]', query: { slug: slug } }}>
+                        <Link href={{ pathname: '/posts/[slug]', query: { slug: slug } }}>
                             <Typography
                                 variant='h6'
                                 sx={{

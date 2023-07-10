@@ -2,11 +2,10 @@ import { Box, Typography } from '@mui/material';
 import Link from 'next/link';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import Code from '../components/Code';
-import Layout from '../components/Layout';
-import PostType from '../interfaces/post';
-import { getAllPosts, getPostBySlug } from '../lib/api';
-import styles from '../styles/Home.module.css';
+import Code from '@/components/Code';
+import Layout from '@/components/Layout';
+import PostType from '@/interfaces/post';
+import { getAllPosts, getPostBySlug } from '@/lib/api';
 
 type Props = {
     post: PostType;

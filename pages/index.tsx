@@ -1,9 +1,9 @@
 import { Box, Typography } from '@mui/material';
 import Link from 'next/link';
-import CustomDivider from '../components/CustomDivider';
-import Layout from '../components/Layout';
-import Profile from '../components/Profile';
-import { getAllPosts } from '../lib/api';
+import CustomDivider from '@/components/CustomDivider';
+import Layout from '@/components/Layout';
+import Profile from '@/components/Profile';
+import { getAllPosts } from '@/lib/api';
 
 export default function Home({ latestPosts }) {
     return (
@@ -17,7 +17,7 @@ export default function Home({ latestPosts }) {
                 {latestPosts.map(({ title, date, slug }) => {
                     return (
                         <Box sx={{ py: 2 }} key={slug}>
-                            <Link href={{ pathname: '/[slug]', query: { slug: slug } }}>
+                            <Link href={{ pathname: '/posts/[slug]', query: { slug: slug } }}>
                                 <Typography
                                     variant='h6'
                                     sx={{

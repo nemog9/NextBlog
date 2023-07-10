@@ -1,7 +1,7 @@
 import { Box, Pagination, PaginationItem, Typography, styled } from '@mui/material';
 import Link from 'next/link';
-import Layout from '../../../components/Layout';
-import { getAllPosts } from '../../../lib/api';
+import Layout from '@/components/Layout';
+import { getAllPosts } from '@/lib/api';
 
 const Page = ({ latestPosts, pageNum, pageCount }) => {
     return (
@@ -10,7 +10,7 @@ const Page = ({ latestPosts, pageNum, pageCount }) => {
             {latestPosts.map(({ title, date, slug }) => {
                 return (
                     <Box sx={{ py: 2 }} key={slug}>
-                        <Link href={{ pathname: '/[slug]', query: { slug: slug } }}>
+                        <Link href={{ pathname: '/posts/[slug]', query: { slug: slug } }}>
                             <Typography
                                 variant='h6'
                                 sx={{
