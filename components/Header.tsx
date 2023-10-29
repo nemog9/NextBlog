@@ -7,7 +7,7 @@ const Header = () => {
     return (
         <Link href='/'>
             <Typography sx={{ py: 2 }} variant='h5' className={styles.header}>
-                nemogLog
+                nemog
             </Typography>
         </Link>
     );

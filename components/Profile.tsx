@@ -12,42 +12,47 @@ const Profile = () => {
     };
     return (
         <>
-            <Box
-                sx={{
-                    display: 'flex',
-                    // justifyContent: 'space-between',
-                    gap: 12,
-                }}
-            >
-                <Typography variant='h4'>nemog</Typography>
+            <Box display='flex' flexDirection='column' justifyContent='center' alignItems='center' gap='20px'>
                 <Image
                     src='/nemog.jpg'
                     alt='Profile Icon'
-                    width={100}
-                    height={100}
+                    width='350'
+                    height='350'
                     style={imageStyle}
                 />
-            </Box>
-            <Typography>システムエンジニアをしています。</Typography>
-            <Box
+                <Box
                 sx={{
                     display: 'flex',
-                    gap: 2,
+                    flexDirection: 'column'
                 }}
             >
                 <Link href='https://github.com/nemog9'>
-                    <SimpleIconsGithub />
+                    <Box display='flex' alignItems='center' gap='10px'>
+                        <SimpleIconsGithub />
+                        <Typography>GitHub</Typography>
+                    </Box>
                 </Link>
                 <Link href='https://zenn.dev/tomone'>
-                    <SimpleIconsZenn />
+                    <Box display='flex' alignItems='center' gap='10px'>
+                        <SimpleIconsZenn />
+                            <Typography>zenn</Typography>
+                    </Box>
                 </Link>
                 <Link href='https://twitter.com/nemog9_'>
-                    <SimpleIconsTwitter />
+                    <Box display='flex' alignItems='center' gap='10px'>
+                            <SimpleIconsTwitter />
+                            <Typography>X</Typography>
+                    </Box>
                 </Link>
                 <Link href='https://www.youtube.com/channel/UCw_spPQfZEes2cC-0Q-bkgg'>
-                    <SimpleIconsYoutube />
+                    <Box display='flex' alignItems='center' gap='10px'>
+                        <SimpleIconsYoutube />
+                        <Typography>YouTube</Typography>
+                    </Box>
                 </Link>
             </Box>
+            </Box>
+
         </>
     );
 };

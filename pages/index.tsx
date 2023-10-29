@@ -12,7 +12,7 @@ export default function Home({ latestPosts }) {
                 <Profile />
             </Layout>
             <CustomDivider />
-            <Layout>
+            {/* <Layout>
                 <Typography variant='h5'>Latest Posts</Typography>
                 {latestPosts.map(({ title, date, slug }) => {
                     return (
@@ -32,8 +32,8 @@ export default function Home({ latestPosts }) {
                     );
                 })}
             </Layout>
-            <CustomDivider />
-            <Layout>
+            <CustomDivider /> */}
+            {/* <Layout>
                 <Typography variant='h5'>Navigation</Typography>
                 <Box
                     sx={{
@@ -51,7 +51,7 @@ export default function Home({ latestPosts }) {
                         <Typography>Repository</Typography>
                     </Link>
                 </Box>
-            </Layout>
+            </Layout> */}
         </>
     );
 }
