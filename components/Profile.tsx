@@ -6,7 +6,6 @@ import SimpleIconsTwitter from './icons/Twitter';
 import SimpleIconsYoutube from './icons/YouTube';
 import SimpleIconsZenn from './icons/Zenn';
 import SimpleIconsNote from './icons/Note';
-import SimpleIconsHatena from './icons/Hatena';
 
 const Profile = () => {
     const imageStyle = {
