@@ -5,6 +5,8 @@ import SimpleIconsGithub from './icons/GitHub';
 import SimpleIconsTwitter from './icons/Twitter';
 import SimpleIconsYoutube from './icons/YouTube';
 import SimpleIconsZenn from './icons/Zenn';
+import SimpleIconsNote from './icons/Note';
+import SimpleIconsHatena from './icons/Hatena';
 
 const Profile = () => {
     const imageStyle = {
@@ -48,6 +50,17 @@ const Profile = () => {
                     <Box display='flex' alignItems='center' gap='10px'>
                         <SimpleIconsYoutube />
                         <Typography>YouTube</Typography>
+                    </Box>
+                </Link>
+                <Link href='https://note.com/nemog9'>
+                    <Box display='flex' alignItems='center' gap='10px'>
+                        <SimpleIconsNote />
+                        <Typography>note</Typography>
+                    </Box>
+                </Link>
+                <Link href='https://nemog.hatenablog.com/'>
+                    <Box display='flex' alignItems='center' gap='10px'>
+                        <Typography>はてなブログ</Typography>
                     </Box>
                 </Link>
             </Box>
