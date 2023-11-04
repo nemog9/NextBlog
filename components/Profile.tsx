@@ -2,10 +2,10 @@ import { Box, Typography } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 import SimpleIconsGithub from './icons/GitHub';
+import SimpleIconsNote from './icons/Note';
 import SimpleIconsTwitter from './icons/Twitter';
 import SimpleIconsYoutube from './icons/YouTube';
 import SimpleIconsZenn from './icons/Zenn';
-import SimpleIconsNote from './icons/Note';
 
 const Profile = () => {
     const imageStyle = {
@@ -13,7 +13,13 @@ const Profile = () => {
     };
     return (
         <>
-            <Box display='flex' flexDirection='column' justifyContent='center' alignItems='center' gap='20px'>
+            <Box
+                display='flex'
+                flexDirection='column'
+                justifyContent='center'
+                alignItems='center'
+                gap='20px'
+            >
                 <Image
                     src='/nemog.jpg'
                     alt='Profile Icon'
@@ -22,49 +28,48 @@ const Profile = () => {
                     style={imageStyle}
                 />
                 <Box
-                sx={{
-                    display: 'flex',
-                    flexDirection: 'column'
-                }}
-            >
-                <Link href='https://github.com/nemog9'>
-                    <Box display='flex' alignItems='center' gap='10px'>
-                        <SimpleIconsGithub />
-                        <Typography>GitHub</Typography>
-                    </Box>
-                </Link>
-                <Link href='https://zenn.dev/tomone'>
-                    <Box display='flex' alignItems='center' gap='10px'>
-                        <SimpleIconsZenn />
+                    sx={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                    }}
+                >
+                    <Link href='https://github.com/nemog9'>
+                        <Box display='flex' alignItems='center' gap='10px'>
+                            <SimpleIconsGithub />
+                            <Typography>GitHub</Typography>
+                        </Box>
+                    </Link>
+                    <Link href='https://zenn.dev/tomone'>
+                        <Box display='flex' alignItems='center' gap='10px'>
+                            <SimpleIconsZenn />
                             <Typography>zenn</Typography>
-                    </Box>
-                </Link>
-                <Link href='https://twitter.com/nemog9_'>
-                    <Box display='flex' alignItems='center' gap='10px'>
+                        </Box>
+                    </Link>
+                    <Link href='https://twitter.com/nemog9_'>
+                        <Box display='flex' alignItems='center' gap='10px'>
                             <SimpleIconsTwitter />
                             <Typography>X</Typography>
-                    </Box>
-                </Link>
-                <Link href='https://www.youtube.com/channel/UCw_spPQfZEes2cC-0Q-bkgg'>
-                    <Box display='flex' alignItems='center' gap='10px'>
-                        <SimpleIconsYoutube />
-                        <Typography>YouTube</Typography>
-                    </Box>
-                </Link>
-                <Link href='https://note.com/nemog9'>
-                    <Box display='flex' alignItems='center' gap='10px'>
-                        <SimpleIconsNote />
-                        <Typography>note</Typography>
-                    </Box>
-                </Link>
-                <Link href='https://nemog.hatenablog.com/'>
-                    <Box display='flex' alignItems='center' gap='10px'>
-                        <Typography>はてなブログ</Typography>
-                    </Box>
-                </Link>
+                        </Box>
+                    </Link>
+                    <Link href='https://www.youtube.com/channel/UCw_spPQfZEes2cC-0Q-bkgg'>
+                        <Box display='flex' alignItems='center' gap='10px'>
+                            <SimpleIconsYoutube />
+                            <Typography>YouTube</Typography>
+                        </Box>
+                    </Link>
+                    <Link href='https://note.com/nemog9'>
+                        <Box display='flex' alignItems='center' gap='10px'>
+                            <SimpleIconsNote />
+                            <Typography>note</Typography>
+                        </Box>
+                    </Link>
+                    <Link href='https://nemog.hatenablog.com/'>
+                        <Box display='flex' alignItems='center' gap='10px'>
+                            <Typography>はてなブログ</Typography>
+                        </Box>
+                    </Link>
+                </Box>
             </Box>
-            </Box>
-
         </>
     );
 };

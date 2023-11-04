@@ -1,3 +1,1 @@
-export default function ZennPosts () {
-
-}
+export default function ZennPosts() {}
